@@ -3,3 +3,4 @@ lazygit.bat
 *.aux
 *.log
 src/*.pdf
+*.out
