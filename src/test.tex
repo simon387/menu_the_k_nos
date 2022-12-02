@@ -1,0 +1,119 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[a4paper]{scrartcl}
+
+\usepackage{preamble}
+\usepackage{tikz}
+\newcommand\MyRestaurant{Maradonas \\ Jokkmokk}
+
+\begin{document}
+    \pagecolor{fondpaille}
+    \color{Maroon}
+    \begin{tikzpicture} [remember picture, overlay] % center the box in the page
+        \node at (current page.center){%
+            \begin{tikzpicture}
+                \MyCadre{60}{8}{12}%
+
+                \node[text width=13cm] at (thecenter){%
+                    \begin{center}
+                        \MyRestaurant
+                    \end{center}
+
+                    \vspace{1cm}
+
+% Disch with explanations
+
+                    \begin{Group}{Entr\'ees}
+                        \Entry{ Planksteak,  \og Souvas\fg
+                        \Expl{Potatismos, lingonsylt, Roekt renkoett}}                      {69 €}\\
+                        \Entry{ Renskav, betteraves multicolores
+                        \Expl{Potatismos, Lingonsylt, Renkoatt}}                            {71 €}\\
+                        \Entry{ Quenelles de brochet \og Andr\'e Terrail\fg
+                        \Expl{Potatismos, Lingonsylt, Renkoatt}}                           {49 €}\\
+                        \Entry{ Palette de choux aux grains de caviar
+                        \Expl{Potatismos, Lingonsylt, Renkoatt}}                            {135 €}\\
+                        \Entry{ Caviar \og Imp\'erial de Sologne\fg, blinis et condiments
+                        \Expl{Potatismos, Lingonsylt, Renkoatt}}                           {210 €}\\
+
+                    \end{Group}
+
+                    \Tiret
+
+% Disch witout explanatons
+
+                    \begin{Group}{Poissons}
+                        \Entry{ Tron\c on de sole \og des Tournelles\fg }                     {81 €}\\
+                        \Entry{ Saint-Jacques dor\'ees, poireaux au jus de coques}            {82 €}\\
+                        \Entry{ Queue de lotte piqu\'ee \`a la truffe et l\'egumes racines}   {84 €}\\
+                    \end{Group}
+
+                    \Tiret
+
+                    \begin{Group}{Canetons}
+                        \Entry{ Caneton Marco Polo sabl\'e au poivre de Sichuan}             {140 €}\\
+                        \Entry{ Caneton \og Tour d'Argent\fg, pommes souffl\'ees}            {140 €}\\
+                        \Entry{ Caneton \`a l'orange, carotte aux agrumes et pain d'\'epices}{140 €}\\
+                    \end{Group}
+
+                    \Tiret
+
+                    \begin{Group}{Desserts}
+                        \Entry{ Variation chocolat orange, cr\'emeux pain d'\'epices}         {24 €}\\
+                        \Entry{ Biscuit marmelade citron, glace thym citron}                  {24 €}\\
+                        \Entry{ Duo poire r\'eglisse, sorbet poire}                           {24 €}\\
+                    \end{Group}};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+
+% Going to page 2
+    \newpage
+
+    \begin{tikzpicture} [remember picture, overlay] % center the box in the page
+        \node at (current page.center){%
+            \begin{tikzpicture}
+                \MyCadre{60}{8}{12}%
+
+                \node[text width=13cm] at (thecenter){%
+                    \begin{center}
+                        \MyRestaurant
+                    \end{center}
+
+                    \vspace{1cm}
+                    \begin{Group}{Entr\'ees}
+                        \Entry{ Planksteak, potatismos \og Renkoett\fg}                       {69 €}\\
+                        \Entry{ Saint-Jacques en tartare, betteraves multicolores}            {71 €}\\
+                        \Entry{ Quenelles de brochet \og Andr\'e Terrail\fg}                  {49 €}\\
+                        \Entry{ Palette de choux aux grains de caviar}                       {135 €}\\
+                        \Entry{ Caviar \og Imp\'erial de Sologne\fg, blinis et condiments}   {210 €}\\
+                    \end{Group}
+
+                    \Tiret
+
+                    \begin{Group}{Poissons}
+                        \Entry{ Tron\c on de sole \og des Tournelles\fg }                     {81 €}\\
+                        \Entry{ Saint-Jacques dor\'ees, poireaux au jus de coques}            {82 €}\\
+                        \Entry{ Queue de lotte piqu\'ee \`a la truffe et l\'egumes racines}   {84 €}\\
+                    \end{Group}
+
+                    \Tiret
+
+                    \begin{Group}{Canetons}
+                        \Entry{ Caneton Marco Polo sabl\'e au poivre de Sichuan}             {140 €}\\
+                        \Entry{ Caneton \og Tour d'Argent\fg, pommes souffl\'ees}            {140 €}\\
+                        \Entry{ Caneton \`a l'orange, carotte aux agrumes et pain d'\'epices}{140 €}\\
+                    \end{Group}
+
+                    \Tiret
+
+                    \begin{Group}{Desserts}
+                        \Entry{ Variation chocolat orange, cr\'emeux pain d'\'epices}         {24 €}\\
+                        \Entry{ Biscuit marmelade citron, glace thym citron}                  {24 €}\\
+                        \Entry{ Duo poire r\'eglisse, sorbet poire}                           {24 €}\\
+                    \end{Group};
+                };
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+
+\end{document}
