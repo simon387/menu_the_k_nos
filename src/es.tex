@@ -32,15 +32,15 @@
 
 % a tabular* for each food group
 \newenvironment{Group}[1]
-{\noindent\begin{tabular*}{\textwidth}{@{}p{.8\linewidth}@{\extracolsep{\fill}}r@{}}
+{\noindent\begin{tabular*}{\textwidth}{@{}p{1\linewidth}@{\extracolsep{\fill}}r@{}}
 {\fontsize{24}{29}\selectfont\ColText{#1}}
               \\[0.8em]}
               {
 \end{tabular*}}
 
 % to format each entry
-\newcommand*\Entry[2]{%
-    \sffamily#1 & #2}
+\newcommand*\Entry[1]{%
+    \sffamily#1}
 
 % to format each subentry
 \newcommand*\Expl[1]{%
@@ -51,39 +51,17 @@
 \begin{document}
 
     \begin{Group}{Frutas, hierbas y rooibos}
-        \Entry{Té Mango}{}                                                         \\
-        \Expl{procedente de la india, produce un save, aromatico y de sabor pieno, con algo de fruto maduro}                      \\
-        \Entry{Berenjenas a la cordobesa}{9.95}                                                  \\
-        \Expl{Finas lonchas de berenjenas rebozadas a la cordobesa acompañadas de salsa de miel} \\
-        \Entry{Huevos estrellados con chistorra}{10.50}                                          \\
-        \Entry{Cecina de León}{10.70}                                                            \\
-        \Expl{Lonchas muy finas con aceite virgen extra y pimienta recién molida}                \\
+        \Entry{Té Mango} \\
+        \Expl{procedente de la india, produce un save, aromatico y de sabor pieno, con algo de fruto maduro} \\
+        \Entry{Piña Colada} \\
+        \Expl{Coco, piña y ron, inspirado en el tropical refresco. En verano resulta delicios bien frío. Combina bien solo y con hielo tras una infusión de 4 minutos a 95°} \\
+        \Entry{Sueños tropicales} \\
+        \Expl{Mezcla escaramujo, pasas, hibisco y aroma natural de jackfurit (fruta de jack). Es Recomendable tomar solo tras una infusión de 5 minutos a 95°} \\
+
     \end{Group}
 
     \vfill
 
-    \begin{Group}{Ensaladas}
-        \Entry{Ensalada <<La Abuela>>}{9.20}                                                                                                                                           \\
-        \Expl{Piña, manzana y pimiento rojo, con pollo recién asado y una sabrosa y ligera mayonesa} \\
-        \Entry{Ensalada mediterránea}{8.90}                                                                                                                                            \\
-        \Expl{Lechuga, tomate, cebolla, atún, huevo duro. espárragos y aceitunas}                                                                                                      \\
-        \Entry{Salpicón de pollo}{9.50}                                                                                                                                                \\
-        \Expl{Pollo en tiras recién asado con manzana sobre lechuga en juliana, zanahoria rallada y rodajas de tomate, aliñado con una sorprendente y suave salsa de mostaza y yogurt} \\
-        \Entry{Ensalada de cabra}{10.70}                                                                                                                                               \\
-        \Expl{Queso de cabra templado con mermelada de tomate sobre una variedad de lechugas frescas} \\
-    \end{Group}
 
-    \vfill
-
-    \begin{Group}{Carnes}
-        \Entry{Carpaccio de buey}{13.50}                    \\
-        \Expl{Acompañado de lascas de parmesano y rucuta}   \\
-        \Entry{Parrillada ibérica}{16.70}                   \\
-        \Expl{Pluma, presa y secreto}                       \\
-        \Entry{Patatas con guarnición para acompañar}{3.75} \\
-        \Expl{Fritas caseras}                               \\
-        \Entry{Patatas con guarnición para acompañar}{3.50} \\
-        \Expl{Patatas paja}                                 \\
-    \end{Group}
 
 \end{document}
